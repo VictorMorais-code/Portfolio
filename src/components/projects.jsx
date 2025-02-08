@@ -58,7 +58,7 @@ function Projects() {
                   key={i}
                   src={tec}
                   alt="Tecnologia"
-                  className="w-8 h-8 m-2 hover:scale-105 drop-shadow-md"
+                  className="w-8 h-8 p-1 hover:scale-105 drop-shadow-md"
                 />
               ))}
             </div>
