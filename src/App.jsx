@@ -1,9 +1,12 @@
+import Lottie from "lottie-react";
 import Navbar from "./components/navbar";
 import { TypeAnimation } from "react-type-animation";
 import AnimationHeader from "./components/animationHeader";
 import profile from "./assets/images/profile.jpg";
 import SkillsGrade from "./components/skills";
 import Projects from "./components/projects";
+import AnimationArrow from "./assets/animations/Animation-arrow.json";
+import AnimarionReact from "./assets/animations/Animation-react.json";
 
 function App() {
   return (
@@ -13,7 +16,7 @@ function App() {
       </header>
 
       <section id="header" className="h-dvh">
-        <div className=" flex h-40  m-2 mt-8 p-2 justify-center items-center">
+        <div className="relative flex h-40  m-2 mt-8 p-2 justify-center items-center">
           <div className=" md:w-110 w-60">
             <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-700 to-emerald-400  md:text-4xl font-extrabold">
               Olá, meu nome é Victor!
@@ -39,6 +42,12 @@ function App() {
           <div className="w-60">
             <AnimationHeader />
           </div>
+          <div className="w-40 absolute top-80 left-10 opacity-20">
+            <Lottie animationData={AnimarionReact} loop={true} />
+          </div>
+        </div>
+        <div className="w-10 rotate-90 absolute right-1/2 bottom-10 transform translate-x-1/2">
+          <Lottie animationData={AnimationArrow} loop={true} />
         </div>
       </section>
 
@@ -52,11 +61,11 @@ function App() {
         <div className="place-items-center w-full ">
           <div className="w-3/4 m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200">
             <div className="place-items-center">
-              <div className=" w-40 h-40 m-2 p-4 overflow-hidden">
+              <div className=" w-60 h-60 m-2 p-4 overflow-hidden">
                 <img
                   src={profile}
                   alt="profile"
-                  className="w-full h-full object-cover rounded-full border-slate-300 border-2"
+                  className="w-full h-full object-cover rounded-4xl border-slate-200 shadow-md hover:shadow-slate-200 transition duration-500 ease"
                 />
               </div>
             </div>
