@@ -7,7 +7,7 @@ function Navbar() {
         <div className="w-1/2 place-content-center">
           <h2 className="font-bold">VM</h2>
         </div>
-        <ul className="md:flex gap-4 m-4 text-md font-bold hidden">
+        <ul className="lg:flex gap-4 m-4 text-md font-bold hidden">
           <li>
             <Link
               to="header"

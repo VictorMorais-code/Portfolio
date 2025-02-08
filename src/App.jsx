@@ -16,8 +16,13 @@ function App() {
         <Navbar />
       </header>
 
-      <section id="header" className=" pt-20">
-        <div className="relative flex h-40 p-2 justify-center items-center">
+      <section id="header" className="relative min-h-screen pt-20">
+        <div className="">
+          <div className="absolute w-15 sm:w-20 sm:top-20 top-10 left-5 opacity-20">
+            <Lottie animationData={AnimarionReact} loop={true} />
+          </div>
+        </div>
+        <div className="flex-col flex sm:flex-row p-4 justify-center items-center">
           <div className=" md:w-110 w-60">
             <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-700 to-emerald-400  md:text-4xl font-extrabold">
               Olá, meu nome é Victor!
@@ -44,15 +49,11 @@ function App() {
             <AnimationHeader />
           </div>
         </div>
-        <div className="h-48">
-          <div className="w-20 sm:w-40 top-80 left-10 opacity-20">
-            <Lottie animationData={AnimarionReact} loop={true} />
-          </div>
-        </div>
+
         <div className="w-full overflow-hidden">
           <Carousel />
         </div>
-        <div className="w-full place-items-center  overflow-hidden">
+        <div className="w-full place-items-center absolute bottom-4  overflow-hidden">
           <div className="w-10 rotate-90 m-2 p-2">
             <Lottie animationData={AnimationArrow} loop={true} />
           </div>
@@ -67,7 +68,7 @@ function App() {
           <h1>Sobre mim</h1>
         </div>
         <div className="place-items-center w-full ">
-          <div className="w-3/4 m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200 place-items-center">
+          <div className="sm:w-3/4 w-full m-10 sm:m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200 place-items-center">
             <div className="place-items-center">
               <div className="w-40 h-40 sm:w-60 sm:h-60 m-2 p-4 overflow-hidden">
                 <img
