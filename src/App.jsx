@@ -18,7 +18,10 @@ function App() {
         <Navbar />
       </header>
 
-      <section id="header" className="relative min-h-screen pt-20">
+      <section
+        id="header"
+        className="relative h-dvh pt-20 transition-all duration-200"
+      >
         <div className="">
           <div className="absolute w-15 sm:w-20 md:top-20 top-10 left-5 opacity-30">
             <Lottie animationData={AnimarionReact} loop={true} />
@@ -55,7 +58,7 @@ function App() {
         <div className="w-full overflow-hidden">
           <Carousel />
         </div>
-        <div className="w-full place-items-center absolute bottom-4  overflow-hidden">
+        <div className="w-full place-items-center flex justify-center absolute bottom-0  overflow-hidden">
           <div className="w-10 rotate-90 m-2 p-2">
             <Lottie animationData={AnimationArrow} loop={true} />
           </div>
@@ -69,8 +72,8 @@ function App() {
         <div className="text-center  font-bold text-2xl">
           <h1>Sobre mim</h1>
         </div>
-        <div className="place-items-center w-full ">
-          <div className="sm:w-3/4 w-full m-10 sm:m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200 ">
+        <div className="place-items-center w-full flex justify-center">
+          <div className="sm:w-3/4 w-full m-2 sm:m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200 ">
             <div className="flex flex-col gap-1 justify-center items-center">
               <div className="w-40 h-40 sm:w-60 sm:h-60 m-2 p-2  overflow-hidden">
                 <img
@@ -114,13 +117,16 @@ function App() {
 
       <section
         id="projects"
-        className="place-items-center m-4 mb-20 p-2 flex flex-col"
+        className="place-items-center justify-center m-4 mb-20 p-2 flex flex-col"
       >
         <Projects />
       </section>
 
       <footer>
-        <section id="contact" className="bg-slate-800 p-4 pb-12">
+        <section
+          id="contact"
+          className="bg-slate-800 p-4 pb-12 flex justify-center"
+        >
           <FormContact />
         </section>
       </footer>

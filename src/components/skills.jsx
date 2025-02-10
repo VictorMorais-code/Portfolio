@@ -21,7 +21,7 @@ const skills = [
 
 function SkillsGrade() {
   return (
-    <div className="w-full place-items-center">
+    <div className="w-full place-items-center flex flex-col justify-center">
       <div className="text-center mb-8 justify-center font-bold text-2xl">
         <h1>Skills</h1>
       </div>

@@ -29,7 +29,7 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="w-full place-items-center">
+    <div className="w-full place-items-center flex flex-col justify-center">
       <div className="text-center justify-center mb-8 font-bold text-2xl">
         <h1>Projetos</h1>
       </div>
