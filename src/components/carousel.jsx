@@ -20,7 +20,7 @@ const skills = [
 
 export default function Carousel() {
   return (
-    <div className="overflow-hidden my-15 sm:my-20   py-4">
+    <div className="overflow-hidden my-15 sm:my-20 py-4">
       <div className="flex w-max animate-slide">
         {[...skills, ...skills].map((skill, index) => (
           <div key={index} className="w-10 h-10  mx-15 place-items-center">

@@ -1,7 +1,7 @@
 import github from "../assets/images/github.png";
 import linkedin from "../assets/images/linkedin.png";
 import email from "../assets/images/email.png";
-
+import languages from "../assets/images/language.png";
 const socials = [
   { name: "GitHub", image: github },
   { name: "LinkedIn", image: linkedin },
@@ -9,16 +9,29 @@ const socials = [
 ];
 function Socials() {
   return (
-    <div className="flex justify-center items-center gap-2 m-2">
-      {socials.map((social, index) => (
-        <div key={index} className="w-8 h-8 place-items-center">
-          <img
-            src={social.image}
-            alt={social.name}
-            className="hover:scale-110 transition duration-300 drop-shadow-blue hover:cursor-pointer"
-          />
-        </div>
-      ))}
+    <div className="flex flex-col justify-center items-center">
+      <div className="flex gap-4">
+        {socials.map((social, index) => (
+          <div key={index} className="w-8 h-8 place-items-center mt-2">
+            <img
+              src={social.image}
+              alt={social.name}
+              className="hover:scale-110 transition duration-300 drop-shadow-blue hover:cursor-pointer"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center mt-2  items-center w-full text-sm">
+        <img
+          src={languages}
+          alt="languages"
+          className="w-6 h-6 m-2 drop-shadow-blue hover:scale-110 transition duration-300"
+        />
+        <p>
+          Português <em>(nativo) - </em>
+          Inglês <em>(básico)</em>
+        </p>
+      </div>
     </div>
   );
 }

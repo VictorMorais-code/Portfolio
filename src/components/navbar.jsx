@@ -3,11 +3,11 @@ import { Link } from "react-scroll";
 function Navbar() {
   return (
     <div>
-      <div className="bg-slate-900 flex justify-center shadow-md w-full fixed z-10">
+      <div className="lg:flex hidden bg-slate-900 justify-center shadow-md w-full fixed z-10">
         <div className="w-1/2 place-content-center">
           <h2 className="font-bold">VM</h2>
         </div>
-        <ul className="lg:flex gap-4 m-4 text-md font-bold hidden">
+        <ul className="gap-4 m-4 text-md font-bold flex ">
           <li>
             <Link
               to="header"

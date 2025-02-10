@@ -71,7 +71,7 @@ function App() {
         </div>
         <div className="place-items-center w-full ">
           <div className="sm:w-3/4 w-full m-10 sm:m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200 ">
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col gap-1 justify-center items-center">
               <div className="w-40 h-40 sm:w-60 sm:h-60 m-2 p-2  overflow-hidden">
                 <img
                   src={profile}
@@ -84,7 +84,7 @@ function App() {
                   <em>VICTOR MORAIS</em>
                 </h2>
               </div>
-              <div>
+              <div className="w-full">
                 <Socials />
               </div>
             </div>
@@ -114,13 +114,13 @@ function App() {
 
       <section
         id="projects"
-        className="place-items-center m-4 p-2 flex flex-col"
+        className="place-items-center m-4 mb-20 p-2 flex flex-col"
       >
         <Projects />
       </section>
 
       <footer>
-        <section id="contact" className="bg-slate-800 p-4">
+        <section id="contact" className="bg-slate-800 p-4 pb-12">
           <FormContact />
         </section>
       </footer>
