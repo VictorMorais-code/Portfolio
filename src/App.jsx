@@ -8,6 +8,8 @@ import Projects from "./components/projects";
 import AnimationArrow from "./assets/animations/Animation-arrow.json";
 import AnimarionReact from "./assets/animations/Animation-react.json";
 import Carousel from "./components/carousel";
+import FormContact from "./components/form";
+import Socials from "./components/socials";
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
 
       <section id="header" className="relative min-h-screen pt-20">
         <div className="">
-          <div className="absolute w-15 sm:w-20 sm:top-20 top-10 left-5 opacity-20">
+          <div className="absolute w-15 sm:w-20 md:top-20 top-10 left-5 opacity-30">
             <Lottie animationData={AnimarionReact} loop={true} />
           </div>
         </div>
@@ -64,32 +66,40 @@ function App() {
         id="profile"
         className="place-items-center m-4 p-2 flex flex-col"
       >
-        <div className="text-center justify-center  font-bold text-2xl">
+        <div className="text-center  font-bold text-2xl">
           <h1>Sobre mim</h1>
         </div>
         <div className="place-items-center w-full ">
-          <div className="sm:w-3/4 w-full m-10 sm:m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200 place-items-center">
-            <div className="place-items-center">
-              <div className="w-40 h-40 sm:w-60 sm:h-60 m-2 p-4 overflow-hidden">
+          <div className="sm:w-3/4 w-full m-10 sm:m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200 ">
+            <div className="flex flex-col justify-center items-center">
+              <div className="w-40 h-40 sm:w-60 sm:h-60 m-2 p-2  overflow-hidden">
                 <img
                   src={profile}
                   alt="profile"
                   className="w-full h-full  object-cover rounded-4xl border-slate-200 shadow-md hover:shadow-slate-200 transition duration-500 ease"
                 />
               </div>
+              <div className="font-bold">
+                <h2>
+                  <em>VICTOR MORAIS</em>
+                </h2>
+              </div>
+              <div>
+                <Socials />
+              </div>
             </div>
-            <div className="col-span-2 p-2 text-sm text-justify  text-wrap">
+            <div className="col-span-2 p-2 pt-5 text-sm sm:text-lg text-justify  text-wrap">
               <p>
                 Sou um desenvolvedor frontend apaixonado por criar interfaces
                 modernas e responsivas. Sou formado em Análise e Desenvolvimento
                 de Sistemas e busco sempre aprimorar minhas habilidades,
                 explorando novas tecnologias e boas práticas de desenvolvimento.
-                Tenho experiência com JavaScript, HTML, CSS, React, Tailwind e
-                Bootstrap, desenvolvendo aplicações eficientes e intuitivas. Meu
-                foco é proporcionar a melhor experiência ao usuário por meio de
-                designs bem estruturados e código limpo. Estou sempre aberto a
-                novos desafios e oportunidades para crescer como desenvolvedor!
-                🚀
+                Tenho experiência com JavaScript, HTML, CSS, React, Tailwind,
+                entre outras tecnologias, no momento estou estudando sobre SQL e
+                Node.js. Meu foco é proporcionar a melhor experiência ao usuário
+                por meio de designs bem estruturados e código limpo. Estou
+                sempre aberto a novos desafios e oportunidades para crescer como
+                desenvolvedor!
               </p>
             </div>
           </div>
@@ -109,7 +119,11 @@ function App() {
         <Projects />
       </section>
 
-      <footer>footer</footer>
+      <footer>
+        <section id="contact" className="bg-slate-800 p-4">
+          <FormContact />
+        </section>
+      </footer>
     </div>
   );
 }

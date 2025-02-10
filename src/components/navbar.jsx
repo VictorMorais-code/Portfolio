@@ -50,12 +50,12 @@ function Navbar() {
           </li>
           <li>
             <Link
-              to="experiences"
+              to="contact"
               smooth={true}
               duration={500}
               className="cursor-pointer"
             >
-              Experiências
+              Contato
             </Link>
           </li>
         </ul>
