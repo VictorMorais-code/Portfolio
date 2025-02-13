@@ -2,14 +2,13 @@ import Lottie from "lottie-react";
 import Navbar from "./components/navbar";
 import { TypeAnimation } from "react-type-animation";
 import AnimationHeader from "./components/animationHeader";
-import profile from "./assets/images/profile.jpg";
 import SkillsGrade from "./components/skills";
 import Projects from "./components/projects";
 import AnimationArrow from "./assets/animations/Animation-arrow.json";
 import AnimarionReact from "./assets/animations/Animation-react.json";
 import Carousel from "./components/carousel";
 import FormContact from "./components/form";
-import Socials from "./components/socials";
+import Profile from "./components/profile";
 
 function App() {
   return (
@@ -72,41 +71,7 @@ function App() {
         <div className="text-center  font-bold text-2xl">
           <h1>Sobre mim</h1>
         </div>
-        <div className="place-items-center w-full flex justify-center">
-          <div className="sm:w-3/4 w-full m-2 sm:m-8 bg-slate-700 p-4 rounded-2xl flex flex-col  md:flex-row shadow-md shadow-gray-200 ">
-            <div className="flex flex-col gap-1 justify-center items-center">
-              <div className="w-40 h-40 sm:w-60 sm:h-60 m-2 p-2  overflow-hidden">
-                <img
-                  src={profile}
-                  alt="profile"
-                  className="w-full h-full  object-cover rounded-4xl border-slate-200 shadow-md hover:shadow-slate-200 transition duration-500 ease"
-                />
-              </div>
-              <div className="font-bold">
-                <h2>
-                  <em>VICTOR MORAIS</em>
-                </h2>
-              </div>
-              <div className="w-full">
-                <Socials />
-              </div>
-            </div>
-            <div className="col-span-2 p-2 pt-5 text-sm sm:text-lg text-justify  text-wrap">
-              <p>
-                Sou um desenvolvedor frontend apaixonado por criar interfaces
-                modernas e responsivas. Sou formado em Análise e Desenvolvimento
-                de Sistemas e busco sempre aprimorar minhas habilidades,
-                explorando novas tecnologias e boas práticas de desenvolvimento.
-                Tenho experiência com JavaScript, HTML, CSS, React, Tailwind,
-                entre outras tecnologias, no momento estou estudando sobre SQL e
-                Node.js. Meu foco é proporcionar a melhor experiência ao usuário
-                por meio de designs bem estruturados e código limpo. Estou
-                sempre aberto a novos desafios e oportunidades para crescer como
-                desenvolvedor!
-              </p>
-            </div>
-          </div>
-        </div>
+        <Profile />
       </section>
 
       <section id="skills" className="place-items-center m-4 p-2 flex flex-col">
