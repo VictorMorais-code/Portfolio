@@ -5,26 +5,42 @@ import languages from "../assets/images/language.png";
 import { useTranslation } from "react-i18next";
 
 const socials = [
-  { name: "GitHub", image: github },
-  { name: "LinkedIn", image: linkedin },
-  { name: "Email", image: email },
+  {
+    name: "GitHub",
+    image: github,
+    url: "https://github.com/VictorMorais-code",
+  },
+  {
+    name: "LinkedIn",
+    image: linkedin,
+    url: "https://www.linkedin.com/in/victor-morais-462318324/",
+  },
+  { name: "Email", image: email, url: "mailto:victorm.morais@outlook.com.br" },
 ];
+
 function Socials() {
   const { t } = useTranslation();
+
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex gap-4">
         {socials.map((social, index) => (
-          <div key={index} className="w-8 h-8 place-items-center mt-2">
+          <a
+            key={index}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-8 h-8 place-items-center mt-2"
+          >
             <img
               src={social.image}
               alt={social.name}
               className="hover:scale-110 transition duration-300 drop-shadow-blue hover:cursor-pointer"
             />
-          </div>
+          </a>
         ))}
       </div>
-      <div className="flex justify-center mt-2  items-center w-full text-sm">
+      <div className="flex justify-center mt-2 items-center w-full text-sm">
         <img
           src={languages}
           alt="languages"

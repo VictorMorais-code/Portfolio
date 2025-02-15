@@ -1,4 +1,6 @@
 import ecommerce from "../assets/images/ecommerce.png";
+import portfolio from "../assets/images/portfolio.png";
+import todolist from "../assets/images/todoList.png";
 import jsImg from "../assets/images/javascript.png";
 import htmlImg from "../assets/images/html.png";
 import csslImg from "../assets/images/css.png";
@@ -16,19 +18,21 @@ function Projects() {
       img: ecommerce,
       description: t("translation.projects.project-1.description"),
       tecnologias: [jsImg, htmlImg, csslImg, viteImg, reactImg, tailwindImg],
+      url: "https://victormorais-code.github.io/e-commerce/",
     },
     {
-      name: "E-commerce",
-      img: ecommerce,
-      description: "Um dos primeiros projetos que fiz, ainda está em andamento",
-      tecnologias: [jsImg, htmlImg],
+      name: t("translation.projects.project-2.title"),
+      img: portfolio,
+      description: t("translation.projects.project-2.description"),
+      tecnologias: [jsImg, htmlImg, csslImg, viteImg, reactImg, tailwindImg],
+      url: "https://victormorais-code.github.io/Portfolio/",
     },
     {
-      name: "E-commerce",
-      img: ecommerce,
-      description:
-        "Um dos primeiros projetos que fiz, ainda está em andamento, lorem ipsum dolor sit amet",
-      tecnologias: [jsImg, htmlImg],
+      name: t("translation.projects.project-3.title"),
+      img: todolist,
+      description: t("translation.projects.project-3.description"),
+      tecnologias: [jsImg, htmlImg, csslImg, viteImg, reactImg, tailwindImg],
+      url: "https://victormorais-code.github.io/Projeto1/",
     },
   ];
 
@@ -41,29 +45,31 @@ function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className=" min-h-96 bg-transparent shadow-md shadow-blue-300 text-slate-200
+            className=" min-h-96 bg-transparent shadow-sm shadow-blue-300 text-slate-200
             rounded-lg hover:shadow-xl hover:shadow-blue-400
             w-full transition-all hover:scale-105"
           >
-            <div className="hover:cursor-pointer  relative group rounded-t-lg overflow-hidden">
-              <img
-                src={project.img}
-                alt={project.name}
-                className="w-max hover:scale-110 transition  hover:blur-sm"
-              />
+            <div className="hover:cursor-pointer border-1 border-slate-600 relative group rounded-t-lg overflow-hidden">
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={project.img}
+                  alt={project.name}
+                  className="w-max hover:scale-110 transition  hover:blur-sm"
+                />
+              </a>
 
               <span
                 className="font-bold text-white opacity-0 group-hover:opacity-100 transition-all
               duration-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none rounded-2xl border-2 p-2"
               >
-                Abrir
+                {t("translation.projects.btn-open")}
               </span>
             </div>
             <div className="flex flex-col justify-between h-60">
-              <div className=" mt-2 p-2">
+              <div className=" mt-2 text-center p-2">
                 <span className=" text-md font-semibold">{project.name}</span>
               </div>
-              <div className="p-2 flex flex-col text-wrap overflow-hidden break-words">
+              <div className="p-2 overflow-auto flex flex-col text-wrap break-words">
                 <span className="text-sm ">{project.description}</span>
               </div>
               <div className="grid  grid-cols-4 w-full p-2 sm:grid-cols-6 space-x-2 mt-2">

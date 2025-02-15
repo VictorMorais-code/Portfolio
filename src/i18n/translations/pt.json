@@ -1,5 +1,13 @@
 {
   "translation": {
+    "navbar": {
+      "home": "Início",
+      "about": "Sobre mim",
+      "skills": "Habilidades",
+      "projects": "Projetos",
+      "contact": "Contato"
+    },
+
     "title": "Olá, eu sou Victor Morais",
     "btn-cv": "CV",
     "about-me": {
@@ -10,13 +18,31 @@
     "skills": "Habilidades",
     "projects": {
       "title": "Projetos",
+      "btn-open": "Abrir",
       "project-1": {
         "title": "E-commerce",
-        "description": "Projeto voltado para estudo em React.js e Tailwind CSS. O projeto simula um e-commerce com funcionalidades básicas como adicionar produtos ao carrinho, remover produtos do carrinho e calcular o valor total da compra."
+        "description": "Projeto voltado para estudo em React.js e Tailwind CSS. O projeto simula um e-commerce com funcionalidades básicas como adicionar e remover produtos ao carrinho, e calcular o valor total da compra."
       },
       "project-2": {
-        "title": "Portfolio",
+        "title": "Portfólio",
         "description": "Meu portfólio pessoal, desenvolvido com React.js e Tailwind CSS. O projeto tem como objetivo apresentar meus projetos e habilidades como desenvolvedor frontend."
+      },
+      "project-3": {
+        "title": "Todo-List",
+        "description": "Projeto desenvolvido com React.js e Tailwind CSS. O projeto simula uma lista de tarefas, onde é possível adicionar, remover e marcar tarefas como concluídas e guardando-as com o localstorage."
+      }
+    },
+
+    "contact": {
+      "title": "Contato",
+      "subtitle": "Sinta-se à vontade para entrar em contato, responderei com prazer.",
+      "form": {
+        "name": "Nome",
+        "email": "E-mail",
+        "message": "Mensagem",
+        "send": "Enviar",
+        "sucs-msg": "Mensagem enviada com sucesso!",
+        "err-msg": "Erro ao enviar mensagem. Tente novamente."
       }
     }
   }

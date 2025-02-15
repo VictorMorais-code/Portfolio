@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import code from "../assets/images/code.png";
 import home from "../assets/images/home.png";
 import profile from "../assets/images/profile.png";
 import skills from "../assets/images/skills.png";
@@ -8,14 +9,18 @@ import brazil from "../assets/images/brazil.png";
 import usa from "../assets/images/usa.png";
 import { useTranslation } from "react-i18next";
 import "../i18n/i18n";
+import { useState } from "react";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
+
+  const [showTooltip, setShowTooltip] = useState(false);
 
   return (
     <div>
       <div className="flex backdrop-blur-sm  bottom-0 lg:bottom-auto bg-slate-950/60 justify-center items-center lg:justify-between pl-16 pr-16 shadow-md w-full fixed z-10">
         <div className=" place-content-center hidden lg:flex">
+          <img src={code} alt="code" className="w-6 h-6" />
           <h2 className="font-bold">VM</h2>
         </div>
         <div className="w-max">
@@ -31,10 +36,10 @@ function Navbar() {
                   <img src={home} alt="home" className="w-6 h-6" />
                 </Link>
                 <span
-                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 -translate-x-30 text-xs text-slate-900
-                rounded-md bg-slate-100 group-hover:opacity-100  group-hover:translate-x-0 opacity-0 transition-all"
+                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 translate-y-0 lg:translate-y-0  lg:-translate-x-30 text-xs text-slate-900
+                rounded-md bg-slate-100 group-hover:opacity-100 group-hover:-translate-y-10 lg:group-hover:translate-y-0 group-hover:translate-x-0 opacity-0 transition-all duration-200"
                 >
-                  Home
+                  {t("translation.navbar.home")}
                 </span>
               </div>
             </li>
@@ -50,10 +55,10 @@ function Navbar() {
                   <img src={profile} alt="profile" className="w-6 h-6" />
                 </Link>
                 <span
-                  className="pointer-events-none cursor-default absolute w-max lg:top-12 shadow-md p-1 -translate-x-30 text-xs text-slate-900
-                rounded-md bg-slate-100 group-hover:opacity-100  group-hover:translate-x-0 opacity-0 transition-all"
+                  className="w-max pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 translate-y-0 lg:translate-y-0  lg:-translate-x-30 text-xs text-slate-900
+                  rounded-md bg-slate-100 group-hover:opacity-100 group-hover:-translate-y-10 lg:group-hover:translate-y-0 group-hover:translate-x-0 opacity-0 transition-all duration-200"
                 >
-                  Sobre mim
+                  {t("translation.navbar.about")}
                 </span>
               </div>
             </li>
@@ -69,10 +74,10 @@ function Navbar() {
                   <img src={skills} alt="skills" className="w-6 h-6" />
                 </Link>
                 <span
-                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 -translate-x-30 text-xs text-slate-900
-                rounded-md bg-slate-100 group-hover:opacity-100  group-hover:translate-x-0 opacity-0 transition-all"
+                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 translate-y-0 lg:translate-y-0  lg:-translate-x-30 text-xs text-slate-900
+                  rounded-md bg-slate-100 group-hover:opacity-100 group-hover:-translate-y-10 lg:group-hover:translate-y-0 group-hover:translate-x-0 opacity-0 transition-all duration-200"
                 >
-                  Skills
+                  {t("translation.navbar.skills")}
                 </span>
               </div>
             </li>
@@ -88,10 +93,10 @@ function Navbar() {
                   <img src={projects} alt="projetos" className="w-6 h-6" />
                 </Link>
                 <span
-                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 -translate-x-30 text-xs text-slate-900
-                rounded-md bg-slate-100 group-hover:opacity-100  group-hover:translate-x-0 opacity-0 transition-all"
+                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 translate-y-0 lg:translate-y-0  lg:-translate-x-30 text-xs text-slate-900
+                  rounded-md bg-slate-100 group-hover:opacity-100 group-hover:-translate-y-10 lg:group-hover:translate-y-0 group-hover:translate-x-0 opacity-0 transition-all duration-200"
                 >
-                  Projetos
+                  {t("translation.navbar.projects")}
                 </span>
               </div>
             </li>
@@ -107,10 +112,10 @@ function Navbar() {
                   <img src={contato} alt="contato" className="w-6 h-6" />
                 </Link>
                 <span
-                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 -translate-x-30 text-xs text-slate-900
-                rounded-md bg-slate-100 group-hover:opacity-100  group-hover:translate-x-0 opacity-0 transition-all"
+                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 translate-y-0 lg:translate-y-0  lg:-translate-x-30 text-xs text-slate-900
+                  rounded-md bg-slate-100 group-hover:opacity-100 group-hover:-translate-y-10 lg:group-hover:translate-y-0 group-hover:translate-x-0 opacity-0 transition-all duration-200"
                 >
-                  Contato
+                  {t("translation.navbar.contact")}
                 </span>
               </div>
             </li>
@@ -128,8 +133,8 @@ function Navbar() {
                   />
                 </div>
                 <span
-                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 -translate-x-30 text-xs text-slate-900
-                rounded-md bg-slate-100 group-hover:opacity-100  group-hover:translate-x-0 opacity-0 transition-all"
+                  className="pointer-events-none cursor-default absolute lg:top-12 shadow-md p-1 translate-y-0 lg:translate-y-0  lg:-translate-x-30 text-xs text-slate-900
+                  rounded-md bg-slate-100 group-hover:opacity-100 group-hover:-translate-y-10 lg:group-hover:translate-y-0 group-hover:translate-x-0 opacity-0 transition-all duration-200"
                 >
                   {i18n.language === "pt" ? "English" : "Português"}
                 </span>

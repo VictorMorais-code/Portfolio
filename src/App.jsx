@@ -11,9 +11,11 @@ import AnimarionReact from "./assets/animations/Animation-react.json";
 import Carousel from "./components/carousel";
 import FormContact from "./components/form";
 import Profile from "./components/profile";
+import cv from "./assets/cv-pt.pdf";
+import resume from "./assets/cv-en.pdf";
 
 function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="bg-slate-950 h-max text-slate-300 selection:bg-blue-600 selection:text-slate-950">
@@ -48,7 +50,12 @@ function App() {
               />
             </div>
             <button className=" bg-gradient-to-tr from-purple-950 to-emerald-500 rounded-lg p-2 text-xs font-bold">
-              Download {t("translation.btn-cv")}
+              <a
+                href={i18n.language === "pt" ? cv : resume}
+                download="Victor Morais - Frontend Developer"
+              >
+                Download {t("translation.btn-cv")}
+              </a>
             </button>
           </div>
           <div className="w-60">
