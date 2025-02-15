@@ -8,7 +8,7 @@ function FormContact() {
         </p>
       </div>
       <div className="w-full flex justify-center">
-        <form className="w-3/4 sm:w-1/2 flex flex-col bg-slate-900 p-4 gap-4 rounded-md">
+        <form className="w-3/4 sm:w-1/2 flex flex-col shadow-lg bg-slate-900 p-4 gap-4 rounded-md">
           <input
             type="text"
             placeholder="Name"

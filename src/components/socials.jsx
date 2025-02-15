@@ -2,12 +2,15 @@ import github from "../assets/images/github.png";
 import linkedin from "../assets/images/linkedin.png";
 import email from "../assets/images/email.png";
 import languages from "../assets/images/language.png";
+import { useTranslation } from "react-i18next";
+
 const socials = [
   { name: "GitHub", image: github },
   { name: "LinkedIn", image: linkedin },
   { name: "Email", image: email },
 ];
 function Socials() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex gap-4">
@@ -27,10 +30,7 @@ function Socials() {
           alt="languages"
           className="w-6 h-6 m-2 drop-shadow-blue hover:scale-110 transition duration-300"
         />
-        <p>
-          Português <em>(nativo) - </em>
-          Inglês <em>(básico)</em>
-        </p>
+        <p>{t("translation.about-me.languages")}</p>
       </div>
     </div>
   );

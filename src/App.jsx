@@ -1,3 +1,5 @@
+import "./i18n/i18n";
+import { useTranslation } from "react-i18next";
 import Lottie from "lottie-react";
 import Navbar from "./components/navbar";
 import { TypeAnimation } from "react-type-animation";
@@ -11,8 +13,10 @@ import FormContact from "./components/form";
 import Profile from "./components/profile";
 
 function App() {
+  const { t } = useTranslation();
+
   return (
-    <div className="bg-slate-950 h-max text-slate-300">
+    <div className="bg-slate-950 h-max text-slate-300 selection:bg-blue-600 selection:text-slate-950">
       <header>
         <Navbar />
       </header>
@@ -28,25 +32,23 @@ function App() {
         </div>
         <div className="flex-col flex sm:flex-row p-4 justify-center items-center">
           <div className=" md:w-110 w-60">
-            <h2 className=" text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-700 to-emerald-400  md:text-4xl font-extrabold">
-              Olá, meu nome é Victor!
+            <h2
+              className=" text-transparent bg-clip-text bg-gradient-to-r
+            from-purple-600 via-blue-700 to-emerald-400  md:text-4xl font-extrabold"
+            >
+              {t("translation.title")}
             </h2>
             <div className="h-16">
               <TypeAnimation
                 className="md:text-2xl text-xs text-gray-300"
-                sequence={[
-                  "Desenvolvedor Frontend",
-                  2000,
-                  "JavaScript, React.js e muito mais",
-                  2000,
-                ]}
+                sequence={["Frontend Developer", 2000]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
               />
             </div>
             <button className=" bg-gradient-to-tr from-purple-950 to-emerald-500 rounded-lg p-2 text-xs font-bold">
-              Download CV
+              Download {t("translation.btn-cv")}
             </button>
           </div>
           <div className="w-60">
@@ -57,7 +59,7 @@ function App() {
         <div className="w-full overflow-hidden">
           <Carousel />
         </div>
-        <div className="w-full place-items-center flex justify-center absolute bottom-0  overflow-hidden">
+        <div className="w-full place-items-center flex justify-center absolute bottom-10  overflow-hidden">
           <div className="w-10 rotate-90 m-2 p-2">
             <Lottie animationData={AnimationArrow} loop={true} />
           </div>
@@ -69,7 +71,7 @@ function App() {
         className="place-items-center m-4 p-2 flex flex-col"
       >
         <div className="text-center  font-bold text-2xl">
-          <h1>Sobre mim</h1>
+          <h1>{t("translation.about-me.title")}</h1>
         </div>
         <Profile />
       </section>

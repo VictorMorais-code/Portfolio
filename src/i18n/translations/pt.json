@@ -1,0 +1,23 @@
+{
+  "translation": {
+    "title": "Olá, eu sou Victor Morais",
+    "btn-cv": "CV",
+    "about-me": {
+      "title": "Sobre mim",
+      "content": "Sou um desenvolvedor frontend apaixonado por criar interfaces modernas e responsivas. Sou formado em Análise e Desenvolvimento de Sistemas e busco sempre aprimorar minhas habilidades, explorando novas tecnologias e boas práticas de desenvolvimento. Tenho experiência com JavaScript, HTML, CSS, React, Tailwind, entre outras tecnologias. No momento estou estudando SQL e Node.js. Meu foco é proporcionar a melhor experiência ao usuário por meio de designs bem estruturados e código limpo. Estou sempre aberto a novos desafios e oportunidades para crescer como desenvolvedor!",
+      "languages": "Português (nativo), Inglês (básico)"
+    },
+    "skills": "Habilidades",
+    "projects": {
+      "title": "Projetos",
+      "project-1": {
+        "title": "E-commerce",
+        "description": "Projeto voltado para estudo em React.js e Tailwind CSS. O projeto simula um e-commerce com funcionalidades básicas como adicionar produtos ao carrinho, remover produtos do carrinho e calcular o valor total da compra."
+      },
+      "project-2": {
+        "title": "Portfolio",
+        "description": "Meu portfólio pessoal, desenvolvido com React.js e Tailwind CSS. O projeto tem como objetivo apresentar meus projetos e habilidades como desenvolvedor frontend."
+      }
+    }
+  }
+}
